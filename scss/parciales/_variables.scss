@@ -1,0 +1,118 @@
+// Variables
+$acoplamiento-imagen: cover;
+$width-estandar: 100%;
+$height-estandar: 100%;
+$fontMaxima: 100%;
+$espacioGridBase: 10px;
+$letrasNegrillas: bold;
+$alineacionAlCentro: center;
+
+//Mixins
+
+
+// Mixin general de los tamaños en la version Movil y Desktop
+@mixin sizes($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+//Mixin de media Queries
+@mixin tamWidthMinimosMaximos($minWidth,$maxWidth){
+    min-width: $minWidth;
+    max-width: $maxWidth;
+}
+
+@mixin contenedorDisplayGrid($display,$minWidth,$maxWidth,$overflow){
+    display: $display;
+    min-width: $minWidth;
+    max-width: $maxWidth;
+    overflow: $overflow;
+}
+
+@mixin contenedorGeneralDescuentos($miDisplay,$gridArea,$tamWidth,$minWidth,$maxWidth){
+    display: $miDisplay;
+    grid-area: $gridArea;
+    width: $tamWidth;
+    min-width: $minWidth;
+    max-width: $maxWidth;
+}
+
+//mixin del footer
+@mixin atributoSeccionFooter($color,$margen,$alineacionTexto) {
+    color: $color;
+    margin: $margen;
+    text-align: $alineacionTexto;
+}
+
+//Mixin de pagina Descuento
+@mixin atributosDisplayFlex($display, $marginTop, $wrap, $contenidoJustificado, $marginBottom) {
+    display: $display;
+    margin-top: $marginTop;
+    flex-wrap: $wrap;
+    justify-content: $contenidoJustificado;
+    margin-bottom: $marginBottom;
+}
+//Carrito
+@mixin contenedorGrid($grid,$marginTop,$gap){
+    display: $grid;
+    margin-top: $marginTop;
+    gap: $gap;
+}
+
+//Paleta de colores de colores generales de las
+// paginas para la version movil y desktop
+
+$paleta-colores: (
+
+    // Colores generales aplicadas a todas las páginas
+    'colorPrincipal' : rgba(235, 245, 252, 1),
+    'colorSecundario': #3f2c89,
+    'colorBlanco': white,
+    'colorNegro' : black,
+    'segundoColorPrincipal':rgba(236, 247, 255, 1),
+
+    // colores exclusivos para el index
+    'colorFondoLanding1': rgba(5,0,136,0.5),
+    'colorLetrasAnimadas': rgb(0,0,102),
+    'colorLetrasBoton': #EC2D53,
+
+    // Colores exclusivos de productos
+    'colorAuxiliarProductos': gray,
+
+    // Colores de la sidebar
+    'colorPrincipalSidebar': rgba(58,94,178,1),
+    //Colores de la navbar(movil)
+    'fondoTransparente': tranparent,
+);
+
+$paleta_colores-BoxText_Shadow: (
+
+    // colores box shadow genericos
+    'colorBoxShadow1'   : rgba(10, 99, 169, 0.16), 
+    'colorBoxShadow2'   : rgba(255, 255, 255, 0.70),
+
+    //Colores box shadow de pagina productos
+    'colortextShadow1'  : rgba(255, 255, 255, 0.45),
+    'colortextShadow2'  : rgba(255,155,255,0.25),
+    'colortextShadow3'  : rgba(255, 255, 255, 0.55),
+    'colortextShadow4:' : rgba(255,155,255,0.35),
+    'colortextShadow5'  : rgba(255,155,255,0.1),
+    'colortextShadow6'  : rgba(255,155,255,0.4),
+
+    //especificos para la navbar - version escritorio
+    'colorBoxShadowCategorias': rgba(0, 0, 0, 0.2),
+
+    //BoxShadow de productos
+    'colorBoxShadowProducto': rgba(0, 0, 0, 0.35),
+);
+
+//Colores exclusivos de Descuentos
+$paleta_colores-descuentos: (
+    'colorBotonDescuentos1' : rgb(3, 138, 3),
+    'colorBotonDescuentos2' : darkslategrey,
+    'colorVariadoDescuento2': cornsilk,
+    'colorVariadoDescuento3': rgba(3, 144, 244, 1),
+    'colorVariadoDescuento4': cornflowerblue,   
+    'colorVariadoDescuento5': rgb(1, 137, 1),
+    'colorVariadoDescuento6': blanchedalmond,
+);

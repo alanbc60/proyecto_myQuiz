@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <div class="contenedor_principal_registro">
+            <!-- Contenedor de imagen -->
+            <div class="imgBx">
+                <img src="../imagenes/pexels-thisisengineering-3862130.jpg" alt="">
+            </div>
+
+            <!-- Contenedor de formulario -->
+            <div class="contenedor_formulario_registro">
+                <div class="formulario_registro">
+                    <h2 >Registro</h2>
+                    <form id="form_registro">
+                        <!-- Nombre de Usuario -->
+                        <div class="inputBx">
+                            <span>Nombre de Usuario</span>
+                            <input type="text" name="registro_nombre">
+                        </div>
+                        <div class="inputBx">
+                            <span>Correo</span>
+                            <input type="email" name="registro_correo">
+                        </div>
+                        <!-- Password -->
+                        <div class="inputBx">
+                            <span>Password</span>
+                            <input type="password" name="registro_password">
+                        </div>
+                        <!-- Sign in -->
+                        <div class="inputBx">
+                            <input id="B_Registro" type="submit" value="Registrar" name="B_Registro">
+                        </div>
+                        <div class="inputBx">
+                            <p>¿Tienes una cuenta?
+                                <a href="../login.html" id="cerrarSesion">Inicia Sesion</a>
+                            </p>
+                            
+                        </div>
+                    </form>
+                    <div class="mensajeErrorLogin"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script src="../src/app.js"></script>
+</html>

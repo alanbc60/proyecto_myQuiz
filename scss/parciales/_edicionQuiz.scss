@@ -1,0 +1,47 @@
+.contendor_principal_crearQuiz{
+    
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    /* Indicar cuantas filas tendra */
+    grid-template-rows: 200px 700px;
+
+    grid-template-areas: 
+        "contenedor_navbar contenedor_edicionQuiz contenedor_edicionQuiz contenedor_edicionQuiz"
+        "contenedor_navbar contenedor_edicionQuiz contenedor_edicionQuiz contenedor_edicionQuiz";
+    
+    @import '_navbar.scss';
+
+    .crearQuiz_contenedorFormulario{
+        grid-area: contenedor_edicionQuiz;
+        background-color: bisque;
+        height: 100%;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        /* Indicar cuantas filas tendra */
+        grid-template-rows: 200px 700px auto;
+        grid-template-areas: 
+            "formulario_nombre formulario_imagen" 
+            "formulario_autor  formulario_autor"
+            "formulario_tiempo  formulario_tiempo";
+
+        .formularioCrearQuiz-nombre{
+            grid-area: formulario_nombre;
+        }
+        .formularioCrearQuiz-autor{
+            grid-area: formulario_autor;
+        }
+        .formularioCrearQuiz-tiempo{
+            grid-area: formulario_tiempo;
+        }
+        .formularioCrearQuiz-imagen{
+            grid-area: formulario_imagen;
+        }
+
+    }
+
+}

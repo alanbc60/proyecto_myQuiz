@@ -1,0 +1,182 @@
+.contenedor_principal_quizzes{
+    padding: 5px 5px 50px;
+    width: 100%;
+    height: 100%;
+    // overflow: hidden;
+    display: grid;
+
+    grid-template-columns: 300px auto auto auto ;
+    /* Indicar cuantas filas tendra */
+    grid-template-rows: auto 700px;
+
+    grid-template-areas: 
+    "contenedor_navbar contenedor_filtro contenedor_filtro contenedor_filtro"
+    "contenedor_navbar contenedor_quizzes contenedor_quizzes contenedor_quizzes";
+
+    @import '_navbar.scss';
+    
+    .contenedor_filtro{
+
+        grid-area: contenedor_filtro;
+        height: 100%;
+        background-color: #31415a;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        /* Indicar cuantas filas tendra */
+        grid-template-rows: auto auto;
+    
+        grid-template-areas: 
+            "filtrado filtrado filtrado botones_filtrado"  
+            "filtrado filtrado filtrado botones_filtrado";
+
+        .filtrado{
+            grid-area: filtrado;
+            // background-color: #ccc;
+            width: auto;
+            padding-left: 10px;
+            padding-top: 10px;
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+            /* Indicar cuantas filas tendra */
+            grid-template-rows: auto auto;
+        
+            grid-template-areas: 
+                "barraBusqueda barraBusqueda barraBusqueda"  
+                "filtro_formulario_grupos filtro_formulario_quizzes filtro_formulario_favoritos";
+
+            .barraBusqueda{
+                grid-area: barraBusqueda;
+                // background-color: darkgreen;
+                width: auto;
+                height: 50px;
+
+                #busqueda{
+                    width: 500px;
+                    height: 40px;
+                }
+               
+            }
+
+            .filtro_formulario_grupos{
+                grid-area: filtro_formulario_grupos;
+                background-color: aqua;
+                width: 300px;
+                height: 50px;
+            }
+    
+            .filtro_formulario_quizzes{
+                grid-area: filtro_formulario_quizzes;
+                background-color: aquamarine;
+                width: 300px;
+                height: 50px;
+            }
+    
+            .filtro_formulario_favoritos{
+                grid-area: filtro_formulario_favoritos;
+                background-color: coral;
+                    height: 50px;
+                    width: 300px;
+            }
+        }
+
+        .botones_filtrado{
+            grid-area: botones_filtrado;
+            background-color: brown;
+            width: 300px;
+
+            .boton_crearQuiz{
+                grid-area: boton_crearQuiz;
+                background-color: cornflowerblue;
+                
+            }
+            
+            .boton_aplicarFiltro{
+                grid-area: boton_aplicarFiltro;
+                background-color: burlywood;
+                height: 50px;
+                   
+            }
+        }
+
+
+
+
+    
+    }
+
+    .contenedor_quizzes{
+        grid-area: contenedor_quizzes;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: burlywood;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+
+        .card {
+            // display: flex;
+            // flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 250px;
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            p:last-child {
+                font-weight: bold;
+                color: green;
+              }
+          }
+          
+    }
+
+    .contenedor_quizzes_filtrado{
+        grid-area: contenedor_quizzes;
+        height: 100%;
+        overflow-y: scroll;
+        background-color: burlywood;
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 20px;
+
+        .card {
+            // display: flex;
+            // flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 250px;
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+            p:last-child {
+                font-weight: bold;
+                color: green;
+              }
+          }
+          
+    }
+}

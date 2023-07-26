@@ -1,0 +1,33 @@
+
+/* contenedor principal */
+
+.contenedor_principal {
+    @include sizes($width-estandar, $height-estandar);
+    display: grid;
+    gap: 10px;
+    background-color: burlywood;
+    /* Indicar cuantas columnas tendra */
+    grid-template-columns: repeat(2, 1fr);
+    /* Indicar cuantas filas tendra */
+    grid-template-rows: 950px 450px;
+
+    /* acomodar el grid */
+    grid-template-areas:
+        "contenedor_imagen      contenedor_formulario"
+        "contenedor_imagen      contenedor_formulario";
+
+    //contenedor landing page
+    .contenedor_principal_landing {
+        background-color: brown;
+        grid-area: contenedor_imagen;
+        // @include sizes(auto, 920px);
+        // color: map-get($map: $paleta-colores, $key: 'colorBlanco');
+    }
+    .contenedor_principal_formulario{
+        background-color: chartreuse;
+        grid-area: contenedor_formulario;
+    }
+    
+
+
+}

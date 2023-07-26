@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <div class="contendor_principal_crearQuiz">
+        <div class="contenedor_nav"> 
+
+            <div class="foto_usuario">
+                <img src="../images/user.png">
+            </div>
+
+            <nav class="nav" id="nav">
+                <ul>
+                    <li>
+                        <a href="#">
+                            Quizzes
+                            <div class="icono" id="0">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Grupos
+                            <div class="icono" id="1">
+                                <i class="fa-solid fa-question"></i>
+                            </div>
+                            
+                        </a>
+                    </li>
+
+                    <li class="item_cerrarSesion">
+                        Cerrar sesion
+                        <a id="boton_cerrarSesion" href="#">
+                            <div class="icono" id="3">
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="crearQuiz_contenedorFormulario">
+            
+            <center>
+                <h1>Edicion de quiz</h1>
+            </center>
+            
+            <form id="form_edicionQuiz" enctype="multipart/form-data">
+                
+                <div class="formularioCrearQuiz-nombre">
+                    <span>Nombre del quiz</span>
+                    <br>
+                    <input type="text" name="nombreQuiz">
+                </div>
+        
+                <div class="formularioCrearQuiz-autor">
+                    <span>Nombre de quien lo creo</span>
+                    <br>
+                    <input type="text" id="inputAutor" name="username" readonly>
+                </div>
+        
+                <div class="formularioCrearQuiz-tiempo">
+                    <span>Tiempo maximo en minutos para resolver el quiz</span>
+                    <br>
+                    <input type="number" name="tiempoQuiz">
+                </div>
+                
+                <div class="formularioCrearQuiz-imagen">
+                    <input type="file" id="img_captada" name="imagenQuiz">
+                    <!-- <input type="submit" value="Subir"> -->
+                </div>
+                
+                <!-- Boton de paso siguiente -->
+                <div class="inputBx">
+                    <input id="boton_pasoSiguiente" type="submit" value="paso siguiente" name="B_Registro">
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="../src/app.js"></script>
+</html>

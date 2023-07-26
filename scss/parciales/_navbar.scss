@@ -1,0 +1,98 @@
+.contenedor_nav{
+    grid-area: contenedor_navbar;
+    background-color: #a9adc9;
+    height: 100%;
+    width: 98%;
+    margin-right: 24px;
+    border-right: 1px solid #d6d6d6;
+    padding-top: 20px;
+    margin-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) ;
+    /* Indicar cuantas filas tendra */
+    grid-template-rows: 200px auto;
+
+    grid-template-areas: 
+        "navbar_fotoUsuario"
+        "navbar_secciones";
+
+    .foto_usuario{
+        border: solid 3px black;
+        grid-area: navbar_fotoUsuario;
+        background-color: #010628;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+
+        img{
+            width: 90%;
+            height: 90%;
+            object-fit: cover;
+            margin-left: 8px;
+            
+        }
+        
+        h3{
+            color: #2d40bf;
+            margin-left: 7px;
+        }
+    }
+    
+    .nav{
+        grid-area: navbar_secciones;
+        background-color: #31415a;
+        height: 50%;
+        position: relative;
+        height: calc(100% - 100px);
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            
+            li {
+                margin: 15px 0;
+                background-color: white;
+                border-radius: 3px;
+                width: 90%;
+                margin-left: 5px;
+                padding-left: 20px;
+
+                .icono {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background-color: #ba2424;
+                    color: #314056;
+                    border-radius: 15px;
+                    text-align: center;
+                    margin-right: 10px;
+
+                    i {
+                        line-height: 40px;
+
+                        a {
+                            text-decoration: none;
+                            color: #31415a;
+                            font-size: 16px;
+                            font-weight: 600;
+                            text-decoration: none;
+                        }
+                    }
+                }
+
+                .selected {
+                    background-color: #2d40bf;
+                    color: #d6d6d6;
+                }
+                
+            }
+            .item_cerrarSesion{
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+
+
+}

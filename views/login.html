@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <div class="contenedor_principal_login">
+            <!-- Contenedor de imagen -->
+            <div class="imgBx">
+                <img src="../imagenes/pexels-thisisengineering-3862130.jpg" alt="">
+            </div>
+
+            <!-- Contenedor de formulario -->
+            <div class="contentBx">
+                <div class="formBx">
+                    <h2>Inicio sesion</h2>
+                    <form id="form_login">
+                        <div class="inputBx">
+                            <span>Correo</span>
+                            <input type="email" name="login_correo">
+                        </div>
+                        <!-- Password -->
+                        <div class="inputBx">
+                            <span>Password</span>
+                            <input type="password" name="login_password">
+                        </div>
+                        <!-- Sign in -->
+                        <div class="inputBx">
+                            <input type="submit" value="Iniciar sesión" name="">
+                        </div>
+                        <div class="inputBx">
+                            <p>¿No tienes una cuenta?
+                                <a href="registro.html">Registrate</a>
+                            </p>
+                            
+                        </div>
+                    </form>
+                    <div class="mensajeErrorLogin"></div>
+                </div>
+            </div>
+
+            <div class="modal">
+                <div class="modal-content">
+                    <h2>Sesión caducada</h2>
+                    <p>Esta ventana se cerrará automáticamente y te reedirecionara</p>
+                    <p>o puedes oprimir el boton antes</p>
+                    <h3 id="contador">Tiempo restante: <span id="valorContador"></span> segundos</h3>
+                </div>
+                <div class="Contenedor_boton_cerrarSesion">
+                    <a href="login.html">Ok</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</body>
+<script type="module" src="../src/login.js"></script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <div class="contenedor_principal_quizzes">
+            <div class="contenedor_nav"> 
+
+                <div class="foto_usuario">
+                    <img src="../images/user.png">
+                </div>
+
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Quizzes
+                                <div class="icono" id="0">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                Grupos
+                                <div class="icono" id="1">
+                                    <i class="fa-solid fa-question"></i>
+                                </div>
+                                
+                            </a>
+                        </li>
+
+                        <li class="item_cerrarSesion">
+                            Cerrar sesion
+                            <a id="boton_cerrarSesion" href="#">
+                                <div class="icono" id="3">
+                                    <i class="fa-solid fa-gear"></i>
+                                </div>
+                                
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="contenedor_filtro">
+                
+                <form>
+                    <div class="filtrado">
+                        <div class="barraBusqueda">
+                            <input type="text" id="busqueda" name="busqueda" placeholder="Escribe el nombre del producto">
+                        </div>
+                        
+                        <!-- Seccion Grupos -->
+                        <div class="filtro_formulario_grupos">
+                            <label for="categoria">Mis Grupos:</label>
+                            <br>
+                            <select id="categoria" name="categoria"></select>
+                        </div>
+    
+                        <!-- Seccion Mis Quizzes -->
+                        <div class="filtro_formulario_quizzes">
+                            <label for="categoria">Mis Quizzes:</label>
+                            <br>
+                            <select id="mis_quizzes" name="quizzes">
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Seccion Favoritos -->
+                        <div class="filtro_formulario_favoritos">
+                            <label for="categoria">Favoritos:</label>
+                            <br>
+                            <select id="favoritos" name="favoritos">
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </form>
+
+                <div class="botones_filtrado">
+                
+                    <div class="boton_crearQuiz">
+                        <a href="edicionQuiz.html" id="crear_quiz" type="button">Crear quiz</a>
+                    </div>
+
+                    <div class="boton_aplicarFiltro">
+                        <button id="cargar-productos" type="button">Aplicar filtro</button>
+                    </div>
+                </div>
+
+
+
+                
+            </div>
+
+            <!-- <div class="contenedor_quizzes_filtrado" id="productos"></div> -->
+            <div class="contenedor_quizzes" id="cards-container">
+                <!-- <div id="cards-container"></div> -->
+            </div>
+        </div>
+       
+    </section>
+</body>
+<script type="module" src="../src/quizzes.js"></script>
+<!-- <script type="module" src="../src/login.js"></script> -->
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <section>
+        <div class="contenedor_principal_quizzes">
+            <div class="contenedor_nav"> 
+                <nav class="nav" id="nav">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <div class="icono" id="0">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icono" id="1">
+                                    <i class="fa-solid fa-question"></i>
+                                </div>
+                                Nueva Pregunta
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icono" id="2">
+                                    <i class="fa-solid fa-list"></i>
+                                </div>
+                                Listado Preguntas
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="icono" id="3">
+                                    <i class="fa-solid fa-gear"></i>
+                                </div>
+                                Configuración
+                            </a>
+                        </li>
+
+                        <li>
+                            <form id="logout-form" method="post" action="/logout">
+                                <input type="hidden" name="logout" value="1">
+                            </form>
+                            <input type="submit" value="Registrar" name="">
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contenedor_filtro">
+                <h2>Contenedor filtro</h2>
+            </div>
+            <div class="contenedor_quizzes">
+                <div id="cards-container"></div>
+            </div>
+        </div>
+
+
+       
+    </section>
+</body>
+</html>
